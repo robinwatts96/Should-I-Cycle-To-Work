@@ -4,7 +4,7 @@
         <link href="style.css" type="text/css" rel="stylesheet">
     </head>
     <body>
-        <button id="showDescription">Description</button>
+        <button id="showDescription">Show Description</button>
         <div id="description">
             <p>I cycle to work every morning along Brighton's seafront. It gets windy... very windy. Each morning I check my weather app to see if 1. The wind is pointing towards me (from the west) and 2. if the wind speed is above 25mph. If both of those conditions are true, then I get the bus. Other wise, I cycle. This app aims to calculate this for me each morning.</p>
         </div>
@@ -15,6 +15,7 @@
         
         <script>
         const showDescription = document.getElementById('showDescription');
+        const description = document.getElementById('description');
         const mph = document.getElementById('mph');
         const calculate = document.getElementById('calculate');
         const answer = document.getElementById('answer');
@@ -22,7 +23,16 @@
         
         showDescription.addEventListener('click', function showDesc () {
             
+            if (description.style.display === "none") {
+                description.style.display = 'block';
+                showDescription.innerHTML = "Hide Description";
+            } else  {
+                description.style.display = 'none';
+                showDescription.innerHTML = "Show Description";
+            }
         });
+
+        
 
         calculate.addEventListener('click', function calc () {
             // check if mph.value is >= 25
