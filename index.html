@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
+        <link href="style.css" type="text/css" rel="stylesheet">
     </head>
     <body>
-        <button id="description"></button>
+        <button id="showDescription">Description</button>
+        <div id="description">
+            <p>I cycle to work every morning along Brighton's seafront. It gets windy... very windy. Each morning I check my weather app to see if 1. The wind is pointing towards me (from the west) and 2. if the wind speed is above 25mph. If both of those conditions are true, then I get the bus. Other wise, I cycle. This app aims to calculate this for me each morning.</p>
+        </div>
+        <br>
         <input type="text" id="mph">
         <button id="calculate">Calculate</button>
         <div id="answer"></div>
         
         <script>
-        const description = document.getElementById('description');
+        const showDescription = document.getElementById('showDescription');
         const mph = document.getElementById('mph');
         const calculate = document.getElementById('calculate');
         const answer = document.getElementById('answer');
 
         
+        showDescription.addEventListener('click', function showDesc () {
+            
+        });
 
         calculate.addEventListener('click', function calc () {
             // check if mph.value is >= 25
