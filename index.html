@@ -13,6 +13,12 @@
         <div id="location"></div>
         <h1 id="wind-speed"></h1>
         <h1 id="wind-direction"></h1>
+        <wind>
+            <speed value="0.93" unit="m/s" name="Calm" />
+            <gusts />
+            <direction value="23" code="NNE" name="North-northeast" />
+          </wind>
+        
         </div>
         <script lang="text/javascript">
             const cityID = 2654710;
@@ -39,6 +45,10 @@
                     document.getElementById('location').innerHTML = d.name;
                     document.getElementById('wind-speed').innerHTML = Math.round(d.wind.speed * 2.23694);
                     document.getElementById('wind-direction').innerHTML = d.wind.deg;
+                    
+                    
+
+                    console.log(d.weather.main);
                 
                     
                     if( description.indexOf('rain') > 0 ) {
