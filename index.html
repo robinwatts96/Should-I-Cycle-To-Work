@@ -1,10 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="utf-8">
+        <title>Current Weather</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
         <link href="style.css" type="text/css" rel="stylesheet">
     </head>
     <body>
-        <button id="showDescription">Show Description</button>
+    <div id="weather">
+        <div id="description"></div>
+        <h1 id="temp"></h1>
+        <div id="location"></div>
+        <h1 id="wind-speed"></h1>
+        <h1 id="wind-direction"></h1>
+        </div>
+        <script lang="text/javascript">
+            const cityID = 2654710;
+    
+            function weatherBalloon( cityID ) {
+                var key = '36b033476dd5cea0c38cb227411b005f';
+                fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID+ '&appid=' + key)  
+                .then(function(resp) { return resp.json() }) // Convert data to json
+                .then(function(data) {
+                    drawWeather(data);
+                })
+                .catch(function() {
+                    // catch any errors
+                });
+            }
+            
+                function drawWeather( d ) {
+                    var celcius = Math.round(parseFloat(d.main.temp)-273.15);
+                    var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32); 
+                    var description = d.weather[0].description;
+                    
+                    document.getElementById('description').innerHTML = description;
+                    document.getElementById('temp').innerHTML = celcius + '&deg;';
+                    document.getElementById('location').innerHTML = d.name;
+                    document.getElementById('wind-speed').innerHTML = Math.round(d.wind.speed * 2.23694);
+                    document.getElementById('wind-direction').innerHTML = d.wind.deg;
+                
+                    
+                    if( description.indexOf('rain') > 0 ) {
+                            document.body.className = 'rainy';
+                    } else if( description.indexOf('cloud') > 0 ) {
+                        document.body.className = 'cloudy';
+                    } else if( description.indexOf('sunny') > 0 ) {
+                            document.body.className = 'sunny';
+                    }
+                }
+    
+            window.onload = function() {
+                weatherBalloon( cityID );
+            }
+        </script>
+
+        <!-- HTML for inputs -->
+        <!-- <button id="showDescription">Show Description</button>
         <div id="description">
             <p>I cycle to work every morning along Brighton's seafront. It gets windy... very windy. Each morning I check my weather app to see if 1. The wind is pointing towards me (from the west) and 2. if the wind speed is above 25mph. If both of those conditions are true, then I get the bus. Other wise, I cycle. This app aims to calculate this for me each morning.</p>
         </div>
@@ -46,6 +98,6 @@
         });
         
         
-        </script>
+        </script> -->
     </body>
 </html>
