@@ -8,6 +8,18 @@
     </head>
     <body>
     <div id="weather">
+        <label for="direction">Which Direction Are You Travelling?:</label>
+            <select name="direction" id="direction">
+            <option value="N">N</option>
+            <option value="NE">NE</option>
+            <option value="E">E</option>
+            <option value="SE">SE</option>
+            <option value="S">S</option>
+            <option value="SW">SW</option>
+            <option value="W">W</option>
+            <option value="NW">NW</option>
+        </select>
+        <button id="submit">Submit</button>
         <div id="description"></div>
         <h1 id="temp"></h1>
         <div id="location"></div>
@@ -16,6 +28,9 @@
         
     </div>
     <script lang="text/javascript">
+        
+        
+        
         const cityID = 2654710;
 
         function weatherBalloon( cityID ) {
