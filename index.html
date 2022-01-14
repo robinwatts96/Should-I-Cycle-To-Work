@@ -29,7 +29,14 @@
     </div>
     <script lang="text/javascript">
         
-        
+        const travel = document.getElementById('direction');
+        const submit = document.getElementById('submit');
+        let travelDirection;
+
+        submit.addEventListener('click', function calcWind () {
+            travelDirection = travel.value;
+            alert(travelDirection);
+        });
         
         const cityID = 2654710;
 
