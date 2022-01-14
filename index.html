@@ -35,11 +35,10 @@
             var celcius = Math.round(parseFloat(d.main.temp)-273.15);
             var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32); 
             var description = d.weather[0].description;
-            // let windDirectionDeg = d.wind.deg;
-            let windDirectionDeg = 250;
+            let windDirectionDeg = d.wind.deg;
             let windDirection;
-            console.log(windDirectionDeg);
         
+            // Later, add arrow and rotate it based on whihc direction wind is going. Use if statement in function below
             function convertWindDirection (w) {
                 if (w >= 348.75 && w <= 365) {
                     windDirection = 'N';
