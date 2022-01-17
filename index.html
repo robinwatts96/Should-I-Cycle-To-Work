@@ -120,10 +120,25 @@
              travelDirection = travel.value;
             // alert(travelDirection);
             // Add wind speed in once other tests defintiely work
-            if (travelDirection === 'N' || travelDirection === 'NE' || travelDirection === 'NW' && windDirection === 'S' || windDirection === 'SW' || windDirection === 'SE') {
-                console.log('Get The Bus');
-            } else if (travelDirection === 'S' || travelDirection === 'SE' || travelDirection === 'SW' && windDirection === 'N' || windDirection === 'NW' || windDirection === 'NE') {
-                console.log('Get The Bus');
+
+            if (travelDirection === 'N' && windDirection === 'S') {
+                console.log('Bus');
+            } else if (travelDirection === 'NE' && windDirection === 'SW') {
+                console.log('Bus');
+            } else if (travelDirection === 'E' && windDirection === 'W') {
+                console.log('Bus');
+            } else if (travelDirection === 'SE' && windDirection === 'NW') {
+                console.log('Bus');
+            } else if (travelDirection === 'S' && windDirection === 'N') {
+                console.log('Bus');
+            } else if (travelDirection === 'SW' && windDirection === 'NE') {
+                console.log('Bus');
+            } else if (travelDirection === 'W' && windDirection === 'E') {
+                console.log('Bus');
+            } else if (travelDirection === 'NW' && windDirection === 'SE') {
+                console.log('Bus');
+            } else {
+                console.log('Bike');
             }
             });
         }
