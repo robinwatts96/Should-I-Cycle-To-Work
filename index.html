@@ -8,6 +8,8 @@
     </head>
     <body>
     <div id="weather">
+        <label>Post Code (First Half Only)</label>
+        <input id="post-code" type="text" pattern="[0-9]{5}" title="First half post code" />
         <label for="direction">Which Direction Are You Travelling?:</label>
             <select name="direction" id="direction">
             <option value="N">N</option>
@@ -30,11 +32,15 @@
     <script lang="text/javascript">
         
         const travel = document.getElementById('direction');
+        const postCode = document.getElementById('post-code');
         const submit = document.getElementById('submit');
         let travelDirection;
         
         const cityID = 2654710;
-        const postCode = 'bh24';
+        let postCodeValue;
+
+        travelDirection = travel.value;
+        postCodeValue = postCode.value;
 
         function weatherBalloon( postCode ) {
             var key = '36b033476dd5cea0c38cb227411b005f';
@@ -105,6 +111,7 @@
             document.getElementById('wind-direction').innerHTML = windDirection;
             
             
+            
 
             console.log(d.weather.main);
         
@@ -118,7 +125,8 @@
             }
 
             submit.addEventListener('click', function bikeOrBus () {
-             travelDirection = travel.value;
+            //  travelDirection = travel.value;
+            //  postCodeValue = postCode.value;
             // alert(travelDirection);
             // Add wind speed in once other tests defintiely work
             // ADD FOR WNW/SWS/NWN/NEN/ESE ETC
