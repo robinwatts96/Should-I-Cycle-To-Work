@@ -34,10 +34,11 @@
         let travelDirection;
         
         const cityID = 2654710;
+        const postCode = 'bh24';
 
-        function weatherBalloon( cityID ) {
+        function weatherBalloon( postCode ) {
             var key = '36b033476dd5cea0c38cb227411b005f';
-            fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID+ '&appid=' + key)  
+            fetch('https://api.openweathermap.org/data/2.5/weather?zip=' + postCode + ',gb&appid=' + key)  
             .then(function(resp) { return resp.json() }) // Convert data to json
             .then(function(data) {
                 drawWeather(data);
@@ -145,7 +146,7 @@
         }
 
         window.onload = function() {
-            weatherBalloon( cityID );
+            weatherBalloon( postCode );
         }
     </script>
 
