@@ -1,8 +1,11 @@
-import { postCodeValue } from "./enterScript";
+let postCodeValue = localStorage.getItem("postCodeValue");
+console.log(postCodeValue);
+
+// import { postCodeValue } from "./enterScript";
 const travel = document.getElementById('direction');
 const submit = document.getElementById('submit');
 let travelDirection;
-console.log(postCodeValue);
+// console.log(postCodeValue);
 
 const cityID = 2654710;
 
@@ -120,5 +123,5 @@ function drawWeather( d ) {
 }
 
 window.onload = function() {
-    weatherBalloon( 'bn2' );
+    weatherBalloon( postCodeValue );
 }
