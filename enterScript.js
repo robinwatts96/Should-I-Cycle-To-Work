@@ -6,3 +6,5 @@ submitPostCode.addEventListener('click', function savePostCode () {
     postCodeValue = postCode.value;
     console.log(postCodeValue);
 })
+
+export let postCodeValue;

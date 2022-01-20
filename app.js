@@ -1,6 +1,8 @@
+import { postCodeValue } from "./enterScript";
 const travel = document.getElementById('direction');
 const submit = document.getElementById('submit');
 let travelDirection;
+console.log(postCodeValue);
 
 const cityID = 2654710;
 
