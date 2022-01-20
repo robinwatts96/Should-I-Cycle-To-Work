@@ -1,18 +1,20 @@
+// Collect post code from enter.js
 let postCodeValue = localStorage.getItem("postCodeValue");
 console.log(postCodeValue);
 
-// import { postCodeValue } from "./enterScript";
+// Set variables for collecting users direction of travel
 const travel = document.getElementById('direction');
 const submit = document.getElementById('submit');
 let travelDirection;
-// console.log(postCodeValue);
 
-const cityID = 2654710;
+// Brighton cityID
+// const cityID = 2654710;
 
 travelDirection = travel.value;
 
 function weatherBalloon( postCode ) {
     var key = '36b033476dd5cea0c38cb227411b005f';
+    // Fetch API with my key and users postcode
     fetch('https://api.openweathermap.org/data/2.5/weather?zip=' + postCode + ',gb&appid=' + key)  
     .then(function(resp) { return resp.json() }) // Convert data to json
     .then(function(data) {
@@ -32,7 +34,7 @@ function drawWeather( d ) {
     let windDirection;
     let windSpeed = Math.round(d.wind.speed * 2.23694);
 
-    // Later, add arrow and rotate it based on whihc direction wind is going. Use if statement in function below
+    // Later, add arrow and rotate it based on which direction wind is going. Use if statement in function below
     function convertWindDirection (w) {
         if (w >= 348.75 && w <= 365) {
             windDirection = 'N';
@@ -79,11 +81,7 @@ function drawWeather( d ) {
     document.getElementById('wind-speed').innerHTML = windSpeed;
     document.getElementById('wind-direction').innerHTML = windDirection;
     
-    
-    
-
     console.log(d.weather.main);
-
     
     if( description.indexOf('rain') > 0 ) {
             document.body.className = 'rainy';
