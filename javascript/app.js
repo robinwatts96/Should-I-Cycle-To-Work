@@ -2,15 +2,14 @@
 let postCodeValue = localStorage.getItem("postCodeValue");
 console.log(postCodeValue);
 
-// Set variables for collecting users direction of travel
+// Set variables
 const travel = document.getElementById('direction');
 const submit = document.getElementById('submit');
-let travelDirection;
+let travelDirection = travel.value;;
 
 // Brighton cityID
 // const cityID = 2654710;
 
-travelDirection = travel.value;
 
 function weatherBalloon( postCode ) {
     var key = '36b033476dd5cea0c38cb227411b005f';
