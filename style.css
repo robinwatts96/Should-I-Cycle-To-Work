@@ -30,3 +30,10 @@ body.rainy {
 #description {
     display: none;
 }
+
+#arrow {
+    transform: rotate(180deg);
+    height: 7.5em;
+    width: auto;
+    text-align: center;
+}
