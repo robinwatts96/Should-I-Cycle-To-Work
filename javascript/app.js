@@ -5,6 +5,7 @@ console.log(postCodeValue);
 // Set variables
 const travel = document.getElementById('direction');
 const submit = document.getElementById('submit');
+const arrow = document.getElementById('arrow');
 let travelDirection;
 
 // Brighton cityID
@@ -41,18 +42,25 @@ function drawWeather( d ) {
             windDirection = 'N';
         } else if (w >= 11.25 && w < 56.25) {
             windDirection = 'NE';
+            arrow.style.transform = "rotate(225deg)";
         } else if (w >= 56.25 && w < 101.25) {
             windDirection = 'E'; 
+            arrow.style.transform = "rotate(270deg)";
         } else if (w >= 101.25 && w < 146.25) {
             windDirection = 'SE';
+            arrow.style.transform = "rotate(315deg)";
         } else if (w >= 146.25 && w < 191.25) {
             windDirection = 'S';
+            arrow.style.transform = "rotate(0deg)";
         } else if (w >= 191.25 && w < 236.25) {
             windDirection = 'SW';
+            arrow.style.transform = "rotate(45deg)";
         } else if (w >= 236.25 && w < 281.25) {
             windDirection = 'W';
+            arrow.style.transform = "rotate(90deg)";
         } else if (w >= 281.25 && w < 326.25) {
             windDirection = 'NW';
+            arrow.style.transform = "rotate(135deg)";
         }
     }
 
