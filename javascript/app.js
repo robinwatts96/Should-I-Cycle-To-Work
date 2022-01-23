@@ -6,6 +6,7 @@ console.log(postCodeValue);
 const travel = document.getElementById('direction');
 const submit = document.getElementById('submit');
 const arrow = document.getElementById('arrow');
+const result = document.getElementById('bike-or-bus');
 let travelDirection;
 
 // Brighton cityID
@@ -90,22 +91,31 @@ function drawWeather( d ) {
     console.log(travelDirection);
     if (travelDirection === 'N' && windDirection === 'S') {
         console.log('Bus');
+        result.innerHTML = 'Bus';
     } else if (travelDirection === 'NE' && windDirection === 'SW') {
         console.log('Bus');
+        result.innerHTML = 'Bus';
     } else if (travelDirection === 'E' && windDirection === 'W') {
         console.log('Bus');
+        result.innerHTML = 'Bus';
     } else if (travelDirection === 'SE' && windDirection === 'NW') {
         console.log('Bus');
+        result.innerHTML = 'Bus';
     } else if (travelDirection === 'S' && windDirection === 'N') {
         console.log('Bus');
+        result.innerHTML = 'Bus';
     } else if (travelDirection === 'SW' && windDirection === 'NE') {
         console.log('Bus');
+        result.innerHTML = 'Bus';
     } else if (travelDirection === 'W' && windDirection === 'E') {
         console.log('Bus');
+        result.innerHTML = 'Bus';
     } else if (travelDirection === 'NW' && windDirection === 'SE') {
         console.log('Bus');
+        result.innerHTML = 'Bus';
     } else {
         console.log('Bike');
+        result.innerHTML = 'Bike';
     }
     });
 }
