@@ -5,7 +5,7 @@ console.log(postCodeValue);
 // Set variables
 const travel = document.getElementById('direction');
 const submit = document.getElementById('submit');
-let travelDirection = travel.value;;
+let travelDirection;
 
 // Brighton cityID
 // const cityID = 2654710;
@@ -35,42 +35,62 @@ function drawWeather( d ) {
 
     // Later, add arrow and rotate it based on which direction wind is going. Use if statement in function below
     function convertWindDirection (w) {
-        if (w >= 348.75 && w <= 365) {
+        // if (w >= 348.75 && w <= 365) {
+        //     windDirection = 'N';
+        // } else if (w >= 0 && w < 11.25) {
+        //     windDirection = 'N';
+        // } else if (w >= 11.25 && w < 33.75) {
+        //     windDirection = 'NNE';
+        // } else if (w >= 33.75 && w < 56.25) {
+        //     windDirection = 'NE';
+        // } else if (w >= 56.25 && w < 78.75) {
+        //     windDirection = 'ENE';
+        // } else if (w >= 78.75 && w < 101.25) {
+        //     windDirection = 'E'; 
+        // } else if (w >= 101.25 && w < 123.75) {
+        //     windDirection = 'ESE';
+        // } else if (w >= 123.75 && w < 146.25) {
+        //     windDirection = 'SE';
+        // } else if (w >= 146.25 && w < 168.75) {
+        //     windDirection = 'SSE';
+        // } else if (w >= 168.75 && w < 191.25) {
+        //     windDirection = 'S';
+        // } else if (w >= 191.25 && w < 213.75) {
+        //     windDirection = 'SSW';
+        // } else if (w >= 213.75 && w < 236.25) {
+        //     windDirection = 'SW';
+        // } else if (w >= 236.25 && w < 258.75) {
+        //     windDirection = 'WSW';
+        // } else if (w >= 258.75 && w < 281.25) {
+        //     windDirection = 'W';
+        // } else if (w >= 281.25 && w < 303.75) {
+        //     windDirection = 'WNW';
+        // } else if (w >= 303.75 && w < 326.25) {
+        //     windDirection = 'NW';
+        // } else if (w >= 326.25 && w < 348.75) {
+        //     windDirection = 'NNW';
+        // } 
+        if (w >= 326.25 && w <= 360) {
             windDirection = 'N';
         } else if (w >= 0 && w < 11.25) {
             windDirection = 'N';
-        } else if (w >= 11.25 && w < 33.75) {
-            windDirection = 'NNE';
-        } else if (w >= 33.75 && w < 56.25) {
+        } else if (w >= 11.25 && w < 56.25) {
             windDirection = 'NE';
-        } else if (w >= 56.25 && w < 78.75) {
-            windDirection = 'ENE';
-        } else if (w >= 78.75 && w < 101.25) {
+        } else if (w >= 56.25 && w < 101.25) {
             windDirection = 'E'; 
-        } else if (w >= 101.25 && w < 123.75) {
-            windDirection = 'ESE';
-        } else if (w >= 123.75 && w < 146.25) {
+        } else if (w >= 101.25 && w < 146.25) {
             windDirection = 'SE';
-        } else if (w >= 146.25 && w < 168.75) {
-            windDirection = 'SSE';
-        } else if (w >= 168.75 && w < 191.25) {
+        } else if (w >= 146.25 && w < 191.25) {
             windDirection = 'S';
-        } else if (w >= 191.25 && w < 213.75) {
-            windDirection = 'SSW';
-        } else if (w >= 213.75 && w < 236.25) {
+        } else if (w >= 191.25 && w < 236.25) {
             windDirection = 'SW';
-        } else if (w >= 236.25 && w < 258.75) {
-            windDirection = 'WSW';
-        } else if (w >= 258.75 && w < 281.25) {
+        } else if (w >= 236.25 && w < 281.25) {
             windDirection = 'W';
-        } else if (w >= 281.25 && w < 303.75) {
-            windDirection = 'WNW';
-        } else if (w >= 303.75 && w < 326.25) {
+        } else if (w >= 281.25 && w < 326.25) {
             windDirection = 'NW';
-        } else if (w >= 326.25 && w < 348.75) {
-            windDirection = 'NNW';
-        } 
+        }
     }
+
     convertWindDirection(windDirectionDeg);
     console.log(windDirection);
     
@@ -82,6 +102,7 @@ function drawWeather( d ) {
     
     console.log(d.weather.main);
     
+    // Change background colour based on weather
     if( description.indexOf('rain') > 0 ) {
             document.body.className = 'rainy';
     } else if( description.indexOf('cloud') > 0 ) {
@@ -91,12 +112,9 @@ function drawWeather( d ) {
     }
 
     submit.addEventListener('click', function bikeOrBus () {
-    //  travelDirection = travel.value;
-    //  postCodeValue = postCode.value;
-    // alert(travelDirection);
     // Add wind speed in once other tests defintiely work
-    // ADD FOR WNW/SWS/NWN/NEN/ESE ETC
-
+    travelDirection = travel.value;
+    console.log(travelDirection);
     if (travelDirection === 'N' && windDirection === 'S') {
         console.log('Bus');
     } else if (travelDirection === 'NE' && windDirection === 'SW') {
