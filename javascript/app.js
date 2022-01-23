@@ -86,7 +86,7 @@ function drawWeather( d ) {
     }
 
     submit.addEventListener('click', function bikeOrBus () {
-    // Add wind speed in once other tests defintiely work
+    // Add wind speed in once other tests definitely work
     travelDirection = travel.value;
     console.log(travelDirection);
     if (travelDirection === 'N' && windDirection === 'S') {
@@ -161,4 +161,4 @@ window.onload = function() {
         //     windDirection = 'NW';
         // } else if (w >= 326.25 && w < 348.75) {
         //     windDirection = 'NNW';
-        // } 
+        // }  
