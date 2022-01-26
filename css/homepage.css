@@ -9,10 +9,9 @@ body {
     align-items: center;
     justify-content: center;
     background: linear-gradient(to right top, #99bbcb, #a5c7d7, #b1d4e2, #bde0ee, #c9edfa);
-    
 }
-
-body::before {
+/* 
+body::after {
     content: '';
     display: block;
   position: absolute;
@@ -21,14 +20,12 @@ body::before {
   width: 100%;
   height: 100%;
   opacity: .1;
-    /* background-image: url('../images/wind-farm.jpg'); */
-    /* background-image: url('../images/wind-bike.jpg'); */
-    /* background-image: url('../images/wind-tree.jpg'); */
+  z-index: 0;
     background-image: url('../images/wind-turbine.jpg');
      background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-}
+} */
 
 h1 {
     margin: 0 auto;
