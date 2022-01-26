@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Should I Cycle To Work?</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+    </head>
+    
+    <body>
+    <div id="weather">
+        <label for="direction">Which Direction Are You Travelling?:</label>
+            <select name="direction" id="direction">
+            <option value="N">N</option>
+            <option value="NE">NE</option>
+            <option value="E">E</option>
+            <option value="SE">SE</option>
+            <option value="S">S</option>
+            <option value="SW">SW</option>
+            <option value="W">W</option>
+            <option value="NW">NW</option>
+        </select>
+        <button id="submit">Submit</button>
+        <div id="description"></div> 
+        <h1 id="temp"></h1>
+        <div id="location"></div>
+        <h1 id="wind-speed"></h1>
+        <h1 id="wind-direction"></h1>
+        <?xml version="1.0" encoding="iso-8859-1"?>
+        <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+        <svg id="arrow" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+        <g>
+            <g id="arrow_x5F_down">
+                <path style="fill:#fff;" d="M32,16.016l-5.672-5.664c0,0-3.18,3.18-6.312,6.312V0h-8.023v16.664l-6.32-6.32L0,16.016L16,32
+                    L32,16.016z"/>
+            </g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        </svg>
+        <h1 id="bike-or-bus"></h1>
+        
+    </div>
+    <script lang="text/javascript" src="javascript/app.js">
+    </script>
+
+        <!-- HTML for inputs -->
+        <!-- <button id="showDescription">Show Description</button>
+        <div id="description">
+            <p>I cycle to work every morning along Brighton's seafront. It gets windy... very windy. Each morning I check my weather app to see if 1. The wind is pointing towards me (from the west) and 2. if the wind speed is above 25mph. If both of those conditions are true, then I get the bus. Other wise, I cycle. This app aims to calculate this for me each morning.</p>
+        </div>
+        <br>
+        <input type="text" id="mph">
+        <button id="calculate">Calculate</button>
+        <div id="answer"></div>
+        
+        <script>
+        const showDescription = document.getElementById('showDescription');
+        const description = document.getElementById('description');
+        const mph = document.getElementById('mph');
+        const calculate = document.getElementById('calculate');
+        const answer = document.getElementById('answer');
+
+        
+        showDescription.addEventListener('click', function showDesc () {
+            
+            if (description.style.display === "none") {
+                description.style.display = 'block';
+                showDescription.innerHTML = "Hide Description";
+            } else  {
+                description.style.display = 'none';
+                showDescription.innerHTML = "Show Description";
+            }
+        });
+
+        
+
+        calculate.addEventListener('click', function calc () {
+            // check if mph.value is >= 25
+            if (mph.value <= 25 && mph.value > 0) {
+                answer.innerHTML = "<h1>Cycle</h1>";
+            } else if (mph.value > 25) {
+                answer.innerHTML = "<h1>Don't Cycle</h1>";
+            } else  {
+                alert('please submit a value');
+            }
+        }); -->
+        
+        
+        </script> 
+    </body>
+</html>
