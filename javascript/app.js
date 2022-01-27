@@ -39,29 +39,31 @@ function drawWeather( d ) {
     function convertWindDirection (w) {
         if (w >= 326.25 && w <= 360) {
             windDirection = 'N';
+            arrow.style.transform = "rotate(180deg)";
         } else if (w >= 0 && w < 11.25) {
             windDirection = 'N';
+            arrow.style.transform = "rotate(180deg)";
         } else if (w >= 11.25 && w < 56.25) {
             windDirection = 'NE';
-            arrow.style.transform = "rotate(225deg)";
+            arrow.style.transform = "rotate(45deg)";
         } else if (w >= 56.25 && w < 101.25) {
             windDirection = 'E'; 
-            arrow.style.transform = "rotate(270deg)";
+            arrow.style.transform = "rotate(90deg)";
         } else if (w >= 101.25 && w < 146.25) {
             windDirection = 'SE';
-            arrow.style.transform = "rotate(315deg)";
+            arrow.style.transform = "rotate(135deg)";
         } else if (w >= 146.25 && w < 191.25) {
             windDirection = 'S';
-            arrow.style.transform = "rotate(0deg)";
+            arrow.style.transform = "rotate(180deg)";
         } else if (w >= 191.25 && w < 236.25) {
             windDirection = 'SW';
-            arrow.style.transform = "rotate(45deg)";
+            arrow.style.transform = "rotate(225deg)";
         } else if (w >= 236.25 && w < 281.25) {
             windDirection = 'W';
-            arrow.style.transform = "rotate(90deg)";
+            arrow.style.transform = "rotate(270deg)";
         } else if (w >= 281.25 && w < 326.25) {
             windDirection = 'NW';
-            arrow.style.transform = "rotate(135deg)";
+            arrow.style.transform = "rotate(315deg)";
         }
     }
 
