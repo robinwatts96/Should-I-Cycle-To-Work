@@ -91,28 +91,28 @@ function drawWeather( d ) {
     // Add wind speed in once other tests definitely work
     travelDirection = travel.value;
     console.log(travelDirection);
-    if (travelDirection === 'N' && windDirection === 'S') {
+    if (travelDirection === 'N' && windDirection === 'N') {
         console.log('Bus');
         result.innerHTML = 'Bus';
-    } else if (travelDirection === 'NE' && windDirection === 'SW') {
+    } else if (travelDirection === 'NE' && windDirection === 'NE') {
         console.log('Bus');
         result.innerHTML = 'Bus';
-    } else if (travelDirection === 'E' && windDirection === 'W') {
+    } else if (travelDirection === 'E' && windDirection === 'E') {
         console.log('Bus');
         result.innerHTML = 'Bus';
-    } else if (travelDirection === 'SE' && windDirection === 'NW') {
+    } else if (travelDirection === 'SE' && windDirection === 'SE') {
         console.log('Bus');
         result.innerHTML = 'Bus';
-    } else if (travelDirection === 'S' && windDirection === 'N') {
+    } else if (travelDirection === 'S' && windDirection === 'S') {
         console.log('Bus');
         result.innerHTML = 'Bus';
-    } else if (travelDirection === 'SW' && windDirection === 'NE') {
+    } else if (travelDirection === 'SW' && windDirection === 'SW') {
         console.log('Bus');
         result.innerHTML = 'Bus';
-    } else if (travelDirection === 'W' && windDirection === 'E') {
+    } else if (travelDirection === 'W' && windDirection === 'W') {
         console.log('Bus');
         result.innerHTML = 'Bus';
-    } else if (travelDirection === 'NW' && windDirection === 'SE') {
+    } else if (travelDirection === 'NW' && windDirection === 'NW') {
         console.log('Bus');
         result.innerHTML = 'Bus';
     } else {
